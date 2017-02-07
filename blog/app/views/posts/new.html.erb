@@ -17,7 +17,6 @@
     }
   </style>
 </head>
-
 <div class="navbar navbar-inverse navbar-fixed-left">
   <a class="navbar-brand" href="#">Sim Ming Lun</a>
   <ul class="nav navbar-nav">
@@ -27,8 +26,9 @@
   </ul>
 </div>
 <div class="container">
+ <h1>Publish a new blog post!</h1>
  <div class="row">
-   <%= form_for :post do |f| %>
+   <%= form_for :post, url: posts_path do |f| %>
      <p>
        <%= f.label :title %><br>
        <%= f.text_field :title %>
