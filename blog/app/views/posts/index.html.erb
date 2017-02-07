@@ -12,7 +12,7 @@
       <%= link_to 'Create New Post', new_post_path %>
     </button>
  <div class="row">
-     <% @posts.each do |post| %>
+     <% @posts.reverse.each do |post| %>
      <h1><%= post.created_at.strftime("%m/%d/%Y") %></h1>
      <h1><%= post.title %></h1>
      <%= post.content %>
