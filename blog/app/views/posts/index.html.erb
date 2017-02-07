@@ -8,12 +8,9 @@
 </div>
 
 <div class="container">
- <div>
-   <button type="button" class="btn btn-primary btn-lg btn-block">
-     <%= link_to 'Create New Post', new_post_path %>
-   </button>
- </div>
-
+    <button type="button" class="btn btn-primary btn-lg">
+      <%= link_to 'Create New Post', new_post_path %>
+    </button>
  <div class="row">
      <% @posts.each do |post| %>
      <h1><%= post.created_at.strftime("%m/%d/%Y") %></h1>
