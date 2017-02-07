@@ -26,16 +26,14 @@
   </ul>
 </div>
 <div class="container">
- <h1>Publish a new blog post!</h1>
  <div class="row">
    <%= form_for :post, url: posts_path do |f| %>
+     <h1><%= @post.created_at.strftime("%m/%d/%Y") %></h1>
      <p>
-       <strong>Title:</strong>
-       <%= @post.title %>
+       <h1><strong><%= @post.title %></strong></h1>
      </p>
 
      <p>
-       <strong>Content:</strong>
        <%= @post.content %>
      </p>
    <% end %>
