@@ -17,6 +17,7 @@
     }
   </style>
 </head>
+
 <div class="navbar navbar-inverse navbar-fixed-left">
   <a class="navbar-brand" href="#">Sim Ming Lun</a>
   <ul class="nav navbar-nav">
@@ -25,10 +26,13 @@
    <li><a href="#">Contact Me</a></li>
   </ul>
 </div>
+
 <div class="container">
  <div class="row">
-   <h2>Left side Navigation bar (Fixed)</h2>
-
-   <p>Left side Navigation</p>
+     <% @posts.each do |post| %>
+      <%= post.title %>
+      <%= post.content %>
+      <%= link_to 'Show', post_path(post) %>
+     <% end %>
  </div>
 </div>
