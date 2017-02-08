@@ -16,9 +16,15 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-.profilepic img {
+.profilepane img {
+  display: block;
   width: 200px;
   border-radius: 100%;
+  margin: auto;
+}
+
+.navbar-brand{
+  display:block;
 }
 
 .navbar-fixed-left {
@@ -30,6 +36,7 @@
 
 .navbar-fixed-left .navbar-nav > li {
  float: none;  /* Cancel default li float: left */
+ display: block;
  width: 139px;
 }
 

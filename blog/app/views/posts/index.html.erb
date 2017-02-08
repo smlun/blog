@@ -1,13 +1,13 @@
 <div class="navbar navbar-inverse navbar-fixed-left">
-  <div class="profilepic">
+  <div class="profilepane">
     <%= image_tag("profilepic.png", :alt => "profile pic") %>
+  </div>
     <a class="navbar-brand" href="#">Sim Ming Lun</a>
     <ul class="nav navbar-nav">
        <li><a href="posts">Timeline</a></li>
        <li><a href="#">About Me</a></li>
        <li><a href="#">Contact Me</a></li>
     </ul>
-  </div>
 </div>
 
 <div class="container">
@@ -22,10 +22,7 @@
      <h1>&nbsp</h1>
      <p><i>Written by: <%= post.author %> </i></p>
      <button type="button" class="btn btn-success btn-xs">
-        <%= link_to 'Open', post_path(post) %>
-     </button>
-     <button type="button" class="btn btn-danger btn-xs">
-        <%= link_to 'Edit', edit_post_path(post) %>
+        <%= link_to 'More', post_path(post) %>
      </button>
      <% end %>
      <h1>&nbsp</h1>
