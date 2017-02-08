@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+posts = Post.create([{ title: 'This is a seed.', content: 'This is a seed.', author: 'Ming Lun', number_of_likes: 0},
+  { title: 'This is a seed.', content: 'This is a seed.', author: 'Ming Lun', number_of_likes: 0},
+  { title: 'This is a seed.', content: 'This is a seed.', author: 'Ming Lun', number_of_likes: 0}])
