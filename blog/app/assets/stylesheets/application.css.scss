@@ -16,6 +16,11 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+.profilepic img {
+  width: 100px;
+  border-radius: 100%;
+}
+
 .navbar-fixed-left {
  width: 300px;
  position: fixed;
