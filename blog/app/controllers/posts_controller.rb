@@ -11,6 +11,10 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def udpate
+    @post = Post.find(params[:id])
+  end
+
   def create
     @post = Post.new(post_params)
 
@@ -20,7 +24,7 @@ class PostsController < ApplicationController
       render 'new'
     end
   end
-  
+
   private
   def post_params
     params.require(:post).permit(:title, :content)
