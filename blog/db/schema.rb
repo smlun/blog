@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208042822) do
+ActiveRecord::Schema.define(version: 20170208064001) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170208042822) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "number_of_likes"
+    t.string   "author"
   end
 
 end
