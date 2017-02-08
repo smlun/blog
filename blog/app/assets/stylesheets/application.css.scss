@@ -35,7 +35,7 @@
 }
 
 .navbar-fixed-left .navbar-nav > li {
- float: none;  /* Cancel default li float: left */
+ float: left;  /* Cancel default li float: left */
  display: block;
  width: 139px;
 }
