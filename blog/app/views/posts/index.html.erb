@@ -20,6 +20,7 @@
      <h1><%= post.title %></h1>
      <%= post.content %>
      <h1>&nbsp</h1>
+     <p><i>Written by: <%= post.author %> </i></p>
      <button type="button" class="btn btn-success btn-xs">
         <%= link_to 'Open', post_path(post) %>
      </button>
