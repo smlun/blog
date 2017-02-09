@@ -10,6 +10,17 @@
   </head>
 
   <body>
+      <div class="navbar navbar-inverse navbar-fixed-left">
+        <div class="profilepane">
+          <%= image_tag("profilepic.png", :alt => "profile pic") %>
+        </div>
+          <a class="navbar-brand" href="#">Sim Ming Lun</a>
+          <ul class="nav navbar-nav">
+             <li><a href="posts">Timeline</a></li>
+             <li><a href="#">About Me</a></li>
+             <li><a href="#">Contact Me</a></li>
+          </ul>
+      </div>
     <%= yield %>
   </body>
 </html>
