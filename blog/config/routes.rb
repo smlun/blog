@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   #declare standard REST resource
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   #set the homepage to post
   root 'posts#index'
