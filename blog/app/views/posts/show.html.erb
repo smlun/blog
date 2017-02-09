@@ -23,6 +23,22 @@
               data: { confirm: 'Are you sure you want to delete this post?' } %></td>
        </button>
      </p>
+
+        <h2>Add a comment:</h2>
+        <%= form_for([@post, @post.comments.build]) do |f| %>
+          <p>
+            <%= f.label :commenter %><br>
+            <%= f.text_field :commenter %>
+          </p>
+          <p>
+            <%= f.label :content %><br>
+            <%= f.text_area :content %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+
    <% end %>
  </div>
 </div>
