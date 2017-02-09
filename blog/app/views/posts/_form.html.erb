@@ -1,55 +1,17 @@
-<div class="navbar navbar-inverse navbar-fixed-left">
-  <div class="profilepic">
-    <%= image_tag("profilepic.png", :alt => "profile pic") %>
-    <a class="navbar-brand" href="#">Sim Ming Lun</a>
-    <ul class="nav navbar-nav">
-       <li><a href="#">Timeline</a></li>
-       <li><a href="#">About Me</a></li>
-       <li><a href="#">Contact Me</a></li>
-    </ul>
-  </div>
-</div>
+<div class="container form-group">
+    <%= form_for @post, :validate => true do |f| %>
+        <%= f.label :title %><br>
+        <%= f.text_field :title, :class => "form-control" %>
 
-<div class="container">
-<%= form_for @post, :validate => true do |f| %>
-  <!-- <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@post.errors.count, "error") %> prohibited
-        this post from being saved:
-      </h2>
-        <% @post.errors.full_messages.each do |msg| %>
-          <div class="alert alert-warning alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <strong>
-              <%= msg %>
-            </strong>
-          </div>
-        <% end %>
-    </div> -->
-       <div class="form-group">
-         <%= f.label :title %><br>
-         <%= f.text_field :title %>
-       </div>
+        <%= f.label :content %><br>
+        <%= f.text_area :content, :class => "form-control" %>
 
-       <div class="form-group">
-         <%= f.label :content %><br>
-         <%= f.text_area :content %>
-       </div>
+        <%= f.label :author %><br>
+        <%= f.text_area :author, :class => "form-control" %>
 
-       <div class="form-group">
-         <%= f.label :author %><br>
-         <%= f.text_area :author %>
-       </div>
-
-       <p>
-         <button type="button" class="btn btn-primary btn-md">
-           <%= f.submit %>
-         </button>
-       </p>
-
-       <p>
-         <%= link_to 'Back', posts_path %>
-       </p>
-     <% end %>
+        <%= f.submit :class => "btn btn-primary" %>
+    <p>
+        <%= link_to 'Back', posts_path %>
+    </p>
+    <% end %>
 </div>
