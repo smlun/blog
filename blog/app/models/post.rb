@@ -7,4 +7,5 @@ class Post < ApplicationRecord
   #                    format: { with: /[a-z]/ }
   # validates :content, presence: true,
   #                     length: { in: 250..2000 }
+  has_many :comments
 end
