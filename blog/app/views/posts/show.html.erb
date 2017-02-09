@@ -27,20 +27,22 @@
 
   <div class="panel panel-primary">
      <div class="panel-heading">
-       <h1>Comments</h1>
+       <p>Comments</p>
      </div>
-     <div class="panel-body">
-         <% @post.comments.each do |comment| %>
-        <p>
-          <strong><%= comment.commenter %></strong>
-          says
-          <strong><%= comment.content %></strong>
-        </p>
-        <p>
-          <i><%= @post.created_at.strftime("%m/%d/%Y") %></i>
-        </p>
+     <ul class="list-group">
+        <% @post.comments.each do |comment| %>
+          <li class="list-group-item">
+            <strong><%= comment.commenter %></strong>
+              <p> says </p>
+            <strong><%= comment.content %></strong>
+              <i><%= comment.email %> at <%= @post.created_at.strftime("%m/%d/%Y") %></i>
+            <%= link_to 'Delete', [comment.post, comment],
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' } %>
+          </li>
+      </ul>
       <% end %>
-    </div>
+    </ul>
   </div>
 
    <h2>Add a comment:</h2>
