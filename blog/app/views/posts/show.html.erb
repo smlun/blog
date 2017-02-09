@@ -25,6 +25,24 @@
      </p>
    <% end %>
 
+  <div class="panel panel-primary">
+     <div class="panel-heading">
+       <h1>Comments</h1>
+     </div>
+     <div class="panel-body">
+         <% @post.comments.each do |comment| %>
+        <p>
+          <strong><%= comment.commenter %></strong>
+          says
+          <strong><%= comment.content %></strong>
+        </p>
+        <p>
+          <i><%= @post.created_at.strftime("%m/%d/%Y") %></i>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
    <h2>Add a comment:</h2>
    <%= form_for([@post, @post.comments.build]) do |f| %>
      <p>
