@@ -1,5 +1,9 @@
 class Post < ApplicationRecord
   has_many :comments
+<<<<<<< HEAD
+=======
+
+>>>>>>> commenting
   validates :title, presence: true,
                     length: { minimum: 15, maximum: 75 },
                     uniqueness: { case_sensitive: false }
