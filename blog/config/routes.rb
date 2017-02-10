@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #declare standard REST resource
   resources :posts do
-    resources :comments
+    resources :comments #adding navigation to see comments
   end
 
   #set the homepage to post

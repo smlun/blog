@@ -24,5 +24,42 @@
        </button>
      </p>
    <% end %>
+
+  <div class="panel panel-primary">
+     <div class="panel-heading">
+       <h3>Comments</h3>
+     </div>
+     <ul class="list-group">
+        <% @post.comments.each do |comment| %>
+          <li class="list-group-item">
+            <strong><%= comment.commenter %></strong> says
+            <strong><%= comment.content %></strong></br>
+            <i><%= comment.email %> at <%= @post.created_at.strftime("%m/%d/%Y") %></i>
+            <%= link_to 'Delete', [comment.post, comment],
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' } %>
+          </li>
+      </ul>
+      <% end %>
+    </ul>
+  </div>
+   <h2>Add a comment:</h2>
+     <%= form_for([@post, @post.comments.build], :validate => true ) do |f| %>
+       <p>
+         <%= f.label :commenter %><br>
+         <%= f.text_field :commenter %>
+       </p>
+       <p>
+         <%= f.label :content %><br>
+         <%= f.text_area :content %>
+       </p>
+       <p>
+         <%= f.label :email %><br>
+         <%= f.text_field :email %>
+       </p>
+       <p>
+         <%= f.submit %>
+       </p>
+     <% end %>
  </div>
 </div>
